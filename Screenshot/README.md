@@ -24,3 +24,18 @@ Policy Type: Developed a Settings Catalog profile for Windows 10/11 endpoints.
 Removable Storage Block: Disabled all Read and Write permissions for Removable Disk drives. This ensures that even if a malicious USB is plugged into a laptop, the OS will refuse to mount the hardware.
 Compliance Integration: Aligned this profile with the organization's Zero-Trust Compliance Policy, ensuring that any device with an enabled USB port is marked as "Non-Compliant" and gated from the network.
 By disabling USB mass storage, we effectively close one of the most common "Air-Gap" jump points used in modern cyber-espionage.
+
+SECURITY MONITORING & THREAT HUNTING (KQL)
+Establish continuous visibility into the environment to detect "Invisible" threats that bypassed the initial gates.
+ Technical Implementation: Log Analytics & Kusto Query Language
+Security is only as good as its Visibility. I utilized KQL (Kusto Query Language) within the Log Analytics workspace to build a custom monitoring dashboard.
+Detection Logic: Created a "Break-Glass" alert system to monitor any sign-in attempts to the emergency Global Admin account.
+Audit Trail: Built a query to aggregate all Delete and Permission Change events within the SharePoint HR site, providing a clear audit trail for compliance officers.
+Zero-Trust Validation: Used logs to confirm that the "Access Denied" events from my earlier testing were correctly logged as ResultType: 50126 (MFA Failure) or 53003 (Conditional Access Block).
+
+// Custom KQL to monitor sensitive HR Site Access
+SigninLogs
+| where AppDisplayName contains "SharePoint"
+| where ResultType == "0" // Successful Logins
+| summarize count() by UserDisplayName, IPAddress, Location
+| order by count() desc
