@@ -17,3 +17,10 @@ Grant Control: Configured the Grant control to require a managed MFA claim, ensu
 IF (User == "HR_Staff") AND (App == "SharePoint") 
 THEN (Require_MFA == TRUE)
 ELSE (Block_Access)
+
+ENDPOINT SECURITY & DEVICE HARDENING (Microsoft Intune)
+Using Microsoft Intune (MEM), I deployed a "Hardware Lockdown" strategy to mitigate the risk of physical data exfiltration (insider threats) and "BadUSB" malware attacks.
+Policy Type: Developed a Settings Catalog profile for Windows 10/11 endpoints.
+Removable Storage Block: Disabled all Read and Write permissions for Removable Disk drives. This ensures that even if a malicious USB is plugged into a laptop, the OS will refuse to mount the hardware.
+Compliance Integration: Aligned this profile with the organization's Zero-Trust Compliance Policy, ensuring that any device with an enabled USB port is marked as "Non-Compliant" and gated from the network.
+By disabling USB mass storage, we effectively close one of the most common "Air-Gap" jump points used in modern cyber-espionage.
