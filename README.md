@@ -18,7 +18,7 @@ Endpoint Compliance: Secured the physical attack surface by utilizing Microsoft 
 
 Threat Visibility: Established a continuous monitoring framework using KQL (Kusto Query Language), providing real-time auditing and rapid incident response capabilities for high-privilege account activities.
 
- Technical Stack & Skills Demonstrated:
+TECHNICAL SKILLS DEMONSTRATED:
 
 Governance: Broken Permission Inheritance, Site Collection Administration, Audit Logging.
 
@@ -27,3 +27,30 @@ Identity: Entra ID (Azure AD), Conditional Access Policies, MFA Enforcement.
 Management: Microsoft Intune (MEM), Configuration Profiles, Hardware Restriction.
 
 Analytics: KQL Scripting, Log Analytics, Security Monitoring.
+
+Technical Skills Demonstrated:
+
+Identity & Access Management (IAM): * Microsoft Entra ID (Azure AD)
+
+Conditional Access Policies (CAP) * Multi-Factor Authentication (MFA) Enforcement
+
+Break-Glass/Emergency Access Account Management
+
+Data Protection & Governance: * SharePoint Online Site Architecture
+
+Granular Permission Hardening (Breaking Inheritance)
+
+Data Loss Prevention (DLP) Policy Configuration
+
+Endpoint Security: * Microsoft Intune (Endpoint Manager)
+
+Configuration Profiles (Device Hardening)
+
+Removable Storage & USB Restriction Policies
+
+Security Operations (SecOps): * KQL (Kusto Query Language) Scripting
+
+Log Analytics Workspace Management
+
+Continuous Security Monitoring & Auditing
+
