@@ -61,7 +61,7 @@ To verify the integrity of the Zero-Trust model, I performed a "Least Privilege"
 * **The Test:** Attempted to access the `Confidential-Payroll` directory using a standard non-admin identity.
 * **The Result:** Access was successfully gated at the identity layer, returning a "403 Access Denied" state.
 * **The Logic:** This validates that my granular permission hardening is active and effectively prevents internal data exfiltration.
-#### 📸 Validation Proof:
+#### Validation Proof:
 ![Data Governance](Screenshot/SharePoint-Folder-Level-Security.png)
 
 
@@ -74,8 +74,8 @@ Grant Control: Configured the Grant control to require a managed MFA claim, ensu
 IF (User == "HR_Staff") AND (App == "SharePoint") 
 THEN (Require_MFA == TRUE)
 ELSE (Block_Access)
-#### 📸 Technical Evidence:
-![Identity & Access Management](screenshots/.png)
+####  Technical Evidence:
+![Identity & Access Management](screenshots/Entra-HR-MFA-Policy.png)
 
 ---
 ENDPOINT SECURITY & DEVICE HARDENING (Microsoft Intune)
