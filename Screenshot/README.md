@@ -62,7 +62,7 @@ To verify the integrity of the Zero-Trust model, I performed a "Least Privilege"
 * **The Result:** Access was successfully gated at the identity layer, returning a "403 Access Denied" state.
 * **The Logic:** This validates that my granular permission hardening is active and effectively prevents internal data exfiltration.
 #### 📸 Validation Proof:
-![Data Governance Shear Point](Screenshot/SharePoint-Folder-Level-Security.png)
+![Data Governance](Screenshot/SharePoint-Folder-Level-Security.png)
 
 
 IDENTITY & ACCESS MANAGEMENT (Microsoft Entra ID)
