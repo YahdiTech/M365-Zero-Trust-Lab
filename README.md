@@ -1,56 +1,14 @@
-Project: Enterprise Zero-Trust Cloud Architecture
-Architect: [Chukwudi/Yahdi Tech]
+CYBERSECURITY & N365 SECURITY ARCHITECT
 
-Environment: Microsoft 365 E5 / Entra ID / Intune / SharePoint Online
+Passionate about Zero-Trust architecture and cloud infrastructure hardening.
 
- Executive Summary
-In response to the increasing sophistication of identity-based attacks and internal data leaks, I engineered a comprehensive Zero-Trust Security Lab designed to protect mission-critical corporate assets.
+Featured Project: M365 Enterprise Zero-Trust Lab
 
-This project simulates a high-security corporate environment where "Default Trust" is eliminated. By implementing layered defenses across the Data, Identity, and Device pillars, I have successfully moved the security posture from a vulnerable perimeter-based model to a resilient, identity-centric architecture.
+Objective: Hardened a global logistics M365 tenant using a "Never Trust, Always Verify" model.
 
- Key Business Outcomes:
+Tech Stack: Entra ID (MFA), Microsoft Intune (MDM), SharePoint Online, and KQL.
 
-Data Integrity & Confidentiality: Engineered a granular permission structure in SharePoint Online, ensuring that sensitive HR and Payroll data is accessible only to authorized personnel, effectively mitigating "Insider Threat" risks.
+Key Result: Secured sensitive HR/Payroll data and enforced 100% device compliance.
 
-Identity Hardening: Eliminated credential-only vulnerabilities by deploying Adaptive MFA through Entra ID Conditional Access. This ensures that even in the event of a password breach, unauthorized access is blocked at the perimeter.
-
-Endpoint Compliance: Secured the physical attack surface by utilizing Microsoft Intune to enforce hardware restrictions, preventing unauthorized data exfiltration via removable storage and blocking "BadUSB" malware vectors.
-
-Threat Visibility: Established a continuous monitoring framework using KQL (Kusto Query Language), providing real-time auditing and rapid incident response capabilities for high-privilege account activities.
-
-TECHNICAL SKILLS DEMONSTRATED:
-
-Governance: Broken Permission Inheritance, Site Collection Administration, Audit Logging.
-
-Identity: Entra ID (Azure AD), Conditional Access Policies, MFA Enforcement.
-
-Management: Microsoft Intune (MEM), Configuration Profiles, Hardware Restriction.
-
-Analytics: KQL Scripting, Log Analytics, Security Monitoring.
-
-Technical Skills Demonstrated:
-
-Identity & Access Management (IAM): * Microsoft Entra ID (Azure AD)
-
-Conditional Access Policies (CAP) * Multi-Factor Authentication (MFA) Enforcement
-
-Break-Glass/Emergency Access Account Management
-
-Data Protection & Governance: * SharePoint Online Site Architecture
-
-Granular Permission Hardening (Breaking Inheritance)
-
-Data Loss Prevention (DLP) Policy Configuration
-
-Endpoint Security: * Microsoft Intune (Endpoint Manager)
-
-Configuration Profiles (Device Hardening)
-
-Removable Storage & USB Restriction Policies
-
-Security Operations (SecOps): * KQL (Kusto Query Language) Scripting
-
-Log Analytics Workspace Management
-
-Continuous Security Monitoring & Auditing
-
+SKILLS:
+Microsoft 365 | Entra ID | Intune | Azure Sentinel | KQL | DLP
