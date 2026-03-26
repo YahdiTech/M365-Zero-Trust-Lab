@@ -1,4 +1,4 @@
-<img width="1765" height="992" alt="Shear Point - Access -Denied - Validation" src="https://github.com/user-attachments/assets/2115efb5-6876-4f41-8ffd-6b5c9059a676" />
+ 
 Project: Enterprise Zero-Trust Cloud Architecture
 Architect: [Chukwudi/Yahdi Tech]
 
@@ -104,8 +104,7 @@ Detection Logic: Created a "Break-Glass" alert system to monitor any sign-in att
 Audit Trail: Built a query to aggregate all Delete and Permission Change events within the SharePoint HR site, providing a clear audit trail for compliance officers.
 Zero-Trust Validation: Used logs to confirm that the "Access Denied" events from my earlier testing were correctly logged as ResultType: 50126 (MFA Failure) or 53003 (Conditional Access Block).
 #### 📸 Technical Evidence:
-![Description of Image](screenshots/your-file-name.png)<img width="1903" height="576" alt="Emergency-Account-Monitoring-KQL" src="https://github.com/user-attachments/assets/9d1bcc91-c89f-4b93-8d64-829e4f7d56fd" /><img width="1901" height="947" alt="Flat Architecture - Security" src="https://github.com/user-attachments/assets/7460654b-6a8b-44fe-8a1e-2069d22b47a6" />
-
+![Description of Image](screenshots/your-file-name.png)<img width="1903" height="576" alt="Emergency-Account-Monitoring-KQL" src="https://github.com/user-attachments/assets/9d1bcc91-c89f-4b93-8d64-829e4f7d56fd"
 
 
 ---
