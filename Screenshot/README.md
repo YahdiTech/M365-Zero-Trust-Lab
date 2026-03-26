@@ -75,7 +75,7 @@ IF (User == "HR_Staff") AND (App == "SharePoint")
 THEN (Require_MFA == TRUE)
 ELSE (Block_Access)
 #### 📸 Technical Evidence:
-![Description of Image](screenshots/your-file-name.png)
+![Identity & Access Management](screenshots/.png)
 
 ---
 ENDPOINT SECURITY & DEVICE HARDENING (Microsoft Intune)
