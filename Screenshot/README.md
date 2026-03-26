@@ -91,7 +91,7 @@ Removable Storage Block: Disabled all Read and Write permissions for Removable D
 Compliance Integration: Aligned this profile with the organization's Zero-Trust Compliance Policy, ensuring that any device with an enabled USB port is marked as "Non-Compliant" and gated from the network.
 By disabling USB mass storage, we effectively close one of the most common "Air-Gap" jump points used in modern cyber-espionage.#### 📸 Technical Evidence:
 ![Description of Image](screenshots/your-file<img width="1917" height="936" alt="Intune-Policy-Compliance-Setting" src="https://github.com/user-attachments/assets/da42a13f-45a5-4dc8-8969-efce39012b55" />
--name.png)<img width="1906" height="947" alt="Intune-Policy-Summary" src="https://github.com/user-attachments/assets/49b8c261-e29e-4d18-a4af-7d8d808e3b8a" /><img width="1901" height="942" alt="Intune-Windowa-Compliance-Setting" src="https://github.com/user-attachments/assets/d2ed6a1d-1fe5-46a0-8266-68c7173d6a1d" />
+-name.png)<img width="1906" height="947" alt="Intune-Policy-Summary" src="https://github.com/user-attachments/assets/49b8c261-e29e-4d18-a4af-7d8d808e3b8a" /><img width="1901" height="942" alt="Intune-Windowa-Compliance-Setting" src="https://github.com/user-attachments/assets/d2ed6a1d-1fe5-46a0-8266-68c7173d6a1d"
 
 
 
@@ -107,11 +107,14 @@ Zero-Trust Validation: Used logs to confirm that the "Access Denied" events from
 ![Description of Image](screenshots/your-file-name.png)<img width="1903" height="576" alt="Emergency-Account-Monitoring-KQL" src="https://github.com/user-attachments/assets/9d1bcc91-c89f-4b93-8d64-829e4f7d56fd"
 
 
----
+----
+TECHNICAL CONFIGURATION:P2 TIER LOGGING PIPELINE
+Licensing: Leveraged Entra ID P2 capabilities to unlock advanced identity protection telemetry.
+Objective: Established a persistent log-retention strategy by routing raw JSON event data into Kusto-ready (KQL) tables.
+Outcome: Eliminated "Blind Spots" in the tenant by capturing 100% of authentication attempts, including failed MFA challenges and legacy protocol usage.
+Technical Configuration: P2-Tier Logging Pipeline"
+####  Technical Evidence:
+![TECHNICAL CONFIGURATION](screenshots/your-file-n<img width="1902" height="952" alt="Entra-Diagnostic-setting-P2-Logging" src="https://github.com/user-attachments/assets/aa04eefe-997f-4c0c-afb2-1d2dbeb5260e" />
+ame.png)<img width="1905" height="901" alt="Azure Infrastructure" src="https://github.com/user-attachments/assets/ffd1ed4b-7efc-407e-a792-9107dc7413e8" /><img width="1894" height="980" alt="Security-Exclude-EmergencyAccess" src="https://github.com/user-attachments/assets/ab050396-b738-4001-a185-e64817467b6e" />
 
-// Custom KQL to monitor sensitive HR Site Access
-SigninLogs
-| where AppDisplayName contains "SharePoint"
-| where ResultType == "0" // Successful Logins
-| summarize count() by UserDisplayName, IPAddress, Location
-| order by count() desc
+
