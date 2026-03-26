@@ -62,7 +62,7 @@ To verify the integrity of the Zero-Trust model, I performed a "Least Privilege"
 * **The Result:** Access was successfully gated at the identity layer, returning a "403 Access Denied" state.
 * **The Logic:** This validates that my granular permission hardening is active and effectively prevents internal data exfiltration.
 #### 📸 Validation Proof:
-![SharePoint Security Validation](screenshots/SharePoint-Access-Denied-Validation.png)
+![Data Governance Shear Point](screenshots/SharePoint-Folder-Level-Security)
 
 
 IDENTITY & ACCESS MANAGEMENT (Microsoft Entra ID)
@@ -74,14 +74,19 @@ Grant Control: Configured the Grant control to require a managed MFA claim, ensu
 IF (User == "HR_Staff") AND (App == "SharePoint") 
 THEN (Require_MFA == TRUE)
 ELSE (Block_Access)
+#### 📸 Technical Evidence:
+![Description of Image](screenshots/your-file-name.png)
 
+---
 ENDPOINT SECURITY & DEVICE HARDENING (Microsoft Intune)
 Using Microsoft Intune (MEM), I deployed a "Hardware Lockdown" strategy to mitigate the risk of physical data exfiltration (insider threats) and "BadUSB" malware attacks.
 Policy Type: Developed a Settings Catalog profile for Windows 10/11 endpoints.
 Removable Storage Block: Disabled all Read and Write permissions for Removable Disk drives. This ensures that even if a malicious USB is plugged into a laptop, the OS will refuse to mount the hardware.
 Compliance Integration: Aligned this profile with the organization's Zero-Trust Compliance Policy, ensuring that any device with an enabled USB port is marked as "Non-Compliant" and gated from the network.
-By disabling USB mass storage, we effectively close one of the most common "Air-Gap" jump points used in modern cyber-espionage.
+By disabling USB mass storage, we effectively close one of the most common "Air-Gap" jump points used in modern cyber-espionage.#### 📸 Technical Evidence:
+![Description of Image](screenshots/your-file-name.png)
 
+---
 SECURITY MONITORING & THREAT HUNTING (KQL)
 Establish continuous visibility into the environment to detect "Invisible" threats that bypassed the initial gates.
  Technical Implementation: Log Analytics & Kusto Query Language
@@ -89,6 +94,10 @@ Security is only as good as its Visibility. I utilized KQL (Kusto Query Language
 Detection Logic: Created a "Break-Glass" alert system to monitor any sign-in attempts to the emergency Global Admin account.
 Audit Trail: Built a query to aggregate all Delete and Permission Change events within the SharePoint HR site, providing a clear audit trail for compliance officers.
 Zero-Trust Validation: Used logs to confirm that the "Access Denied" events from my earlier testing were correctly logged as ResultType: 50126 (MFA Failure) or 53003 (Conditional Access Block).
+#### 📸 Technical Evidence:
+![Description of Image](screenshots/your-file-name.png)
+
+---
 
 // Custom KQL to monitor sensitive HR Site Access
 SigninLogs
