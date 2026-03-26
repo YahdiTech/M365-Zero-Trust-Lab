@@ -1,3 +1,4 @@
+<img width="1765" height="992" alt="Shear Point - Access -Denied - Validation" src="https://github.com/user-attachments/assets/2115efb5-6876-4f41-8ffd-6b5c9059a676" />
 Project: Enterprise Zero-Trust Cloud Architecture
 Architect: [Chukwudi/Yahdi Tech]
 
@@ -63,7 +64,9 @@ To verify the integrity of the Zero-Trust model, I performed a "Least Privilege"
 * **The Logic:** This validates that my granular permission hardening is active and effectively prevents internal data exfiltration.
 #### Validation Proof:
 ![Data Governance](Screenshot/SharePoint-Fold<img width="1904" height="942" alt="ShearPoint-Folder-Level-Security" src="https://github.com/user-attachments/assets/a4b2fec7-660a-4f06-8999-5edc28243887" />
-er-Level-Security.png)
+er-Level-Security.png)<img width="1765" height="992" alt="Shear Point - Access -Denied - Validation" src="https://github.com/user-attachments/assets/644f3afe-1932-43b1-bbc8-14bb208ce189" /><img width="1913" height="854" alt="Shear Point - Library -View" src="https://github.com/user-attachments/assets/419a9adc-0667-4e62-8791-104ba91fb7ae" />
+
+
 
 
 IDENTITY & ACCESS MANAGEMENT (Microsoft Entra ID)
@@ -76,7 +79,9 @@ IF (User == "HR_Staff") AND (App == "SharePoint")
 THEN (Require_MFA == TRUE)
 ELSE (Block_Access)
 ####  Technical Evidence:
-![Identity & Access Management](screenshots/Entra-HR-MFA-Policy.png)
+![Identity & Access Management](screenshots/Entra-HR-MFA<img width="1895" height="939" alt="Entra -HR-MFA Policy" src="https://github.com/user-attachments/assets/a3008a4c-ebf8-41fb-9cad-1d5ac6cf86eb" />
+-Policy.png)<img width="1905" height="953" alt="Entra-Log -Capture-Setup" src="https://github.com/user-attachments/assets/c14d326c-f227-488b-9dea-b305dced9990" />
+
 
 ---
 ENDPOINT SECURITY & DEVICE HARDENING (Microsoft Intune)
@@ -85,7 +90,10 @@ Policy Type: Developed a Settings Catalog profile for Windows 10/11 endpoints.
 Removable Storage Block: Disabled all Read and Write permissions for Removable Disk drives. This ensures that even if a malicious USB is plugged into a laptop, the OS will refuse to mount the hardware.
 Compliance Integration: Aligned this profile with the organization's Zero-Trust Compliance Policy, ensuring that any device with an enabled USB port is marked as "Non-Compliant" and gated from the network.
 By disabling USB mass storage, we effectively close one of the most common "Air-Gap" jump points used in modern cyber-espionage.#### 📸 Technical Evidence:
-![Description of Image](screenshots/your-file-name.png)
+![Description of Image](screenshots/your-file<img width="1917" height="936" alt="Intune-Policy-Compliance-Setting" src="https://github.com/user-attachments/assets/da42a13f-45a5-4dc8-8969-efce39012b55" />
+-name.png)<img width="1906" height="947" alt="Intune-Policy-Summary" src="https://github.com/user-attachments/assets/49b8c261-e29e-4d18-a4af-7d8d808e3b8a" /><img width="1901" height="942" alt="Intune-Windowa-Compliance-Setting" src="https://github.com/user-attachments/assets/d2ed6a1d-1fe5-46a0-8266-68c7173d6a1d" />
+
+
 
 ---
 SECURITY MONITORING & THREAT HUNTING (KQL)
@@ -96,7 +104,9 @@ Detection Logic: Created a "Break-Glass" alert system to monitor any sign-in att
 Audit Trail: Built a query to aggregate all Delete and Permission Change events within the SharePoint HR site, providing a clear audit trail for compliance officers.
 Zero-Trust Validation: Used logs to confirm that the "Access Denied" events from my earlier testing were correctly logged as ResultType: 50126 (MFA Failure) or 53003 (Conditional Access Block).
 #### 📸 Technical Evidence:
-![Description of Image](screenshots/your-file-name.png)
+![Description of Image](screenshots/your-file-name.png)<img width="1903" height="576" alt="Emergency-Account-Monitoring-KQL" src="https://github.com/user-attachments/assets/9d1bcc91-c89f-4b93-8d64-829e4f7d56fd" /><img width="1901" height="947" alt="Flat Architecture - Security" src="https://github.com/user-attachments/assets/7460654b-6a8b-44fe-8a1e-2069d22b47a6" />
+
+
 
 ---
 
