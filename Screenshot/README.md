@@ -1,6 +1,6 @@
  
 Project: Enterprise Zero-Trust Cloud Architecture
-Architect: [Chukwudi/Yahdi Tech]
+Architect: [Chukwudi]
 
 Environment: Microsoft 365 E5 / Entra ID / Intune / SharePoint Online
 
